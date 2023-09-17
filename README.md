@@ -56,7 +56,7 @@ you can also use a relative path (assuming you are in the same directory as the 
 
 
 
-Then simply run :
+Then simply run:
 
 ```
 # download or upgrade the images (especially if you've already used the project)
@@ -65,8 +65,11 @@ docker-compose pull
 # start grafana and influx in the background
 docker-compose up -d grafana influx
 
-# start our ingester
+# start our ingester (after downloading a new export.zip file)
 docker-compose up ingester
+
+# stop grafana and influx
+docker-compose down grafana influx
 ```
 
 
@@ -96,7 +99,7 @@ Head to __http://localhost:3000__, and log in with the grafana creds from the co
 
 You should see some graphs with metrics in them.
 3 dashboards are created by default:
-- a generic one displaying every metric available, 
+- a generic one displaying every metric available,
 - a more refined one for specific metrics that are probably present , like walking distance, hearth related metrics..
 - a workout routes one, that shows a GPS map of your outdoor routes (walking/running/biking).
 
