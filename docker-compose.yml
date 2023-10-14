@@ -21,7 +21,7 @@ services:
     image: k0rventen/apple-health-grafana-ingester
     build: ./ingester
     volumes:
-    - /home/mats/nextcloud/my-documents/privat/Health/ios_healt_data/export.zip:/export.zip
+    - /home/mats/nextcloud/my-documents/privat/Health/ios_health_data/export.zip:/export.zip
 
 volumes:
   influx-data:
